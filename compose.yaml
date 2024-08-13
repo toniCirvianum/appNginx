@@ -1,0 +1,20 @@
+# Services
+services:
+
+  nginx:
+    image: nginx:1.19
+    ports:
+      - xxxx:80
+    volumes:
+      - ./src:????????????
+      - ./.docker/nginx/conf.d:/etc/nginx/conf.d
+    depends_on:
+      - php   #enllacem php amb nginx
+
+  php:
+    image: php:8.0-fpm
+    working_dir: ?????????
+    volumes:
+      - ./src:/????????
+
+
